@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdbool.h>
 
 int main () {
     int opcao;
@@ -45,6 +44,7 @@ int main () {
 
                 if (scanf("%f", &saque) != 1) {
                     printf("Entrada inválida: Digite apenas números reais.\n");
+                    while(getchar () != '\n');
                 } else if (saldo < saque) {
                     printf("Erro: saldo insuficiente.\n");
                 } else if (saque < 0) {
